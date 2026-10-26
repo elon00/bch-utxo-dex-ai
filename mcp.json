@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "bch-utxo-dex-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "Bitcoin Cash",
+        "PROJECT_TICKER": "BCHDEX"
+      },
+      "tools": [
+        {
+          "name": "verify_bchdex_invariants",
+          "description": "Verifies deterministic invariants for BCH UTXO DEX AI on Bitcoin Cash."
+        },
+        {
+          "name": "execute_bchdex_action",
+          "description": "Executes authenticated DeFi state transition."
+        }
+      ]
+    }
+  }
+}
